@@ -22,10 +22,6 @@ class EFC_Form_Action extends Action_Base {
         $fields = $record->get('fields') ?? [];
         $form_fields = $record->get('form_settings')['form_fields'] ?? [];
     
-        error_log('EFC: Form ID: ' . print_r($form_id, true));
-        error_log('EFC: Sent Data: ' . print_r($sent_data, true));
-        error_log('EFC: Fields: ' . print_r($fields, true));
-        error_log('EFC: Form Fields: ' . print_r($form_fields, true));
     
         if (empty($form_id) || empty($sent_data)) {
             error_log('EFC: Form data is incomplete.');
